@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="delete">
+        <a href="#">cap nhat/ xoa</a>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">email</th>
+            <th scope="col">Fname</th>
+            <th scope="col">Lname</th>
+
+        </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="user: ${listUsers}">
+                <tr>
+                    <td th:text = "${user.id}"></td>
+                    <td th:text = "${user.email}"></td>
+                    <td th:text = "${user.firstName}"></td>
+                    <td th:text = "${user.lastName}"></td>
+
+                </tr>
+            </th:block>
+
+        </tbody>
+    </table>
+
+    <script>
+
+    </script>
+
+</body>
+</html>
